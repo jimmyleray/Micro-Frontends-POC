@@ -29,7 +29,9 @@ customElements.define(
               "button",
               {
                 onClick: () => this.setState({ liked: !this.state.liked }),
-                class: `button ${this.state.liked ? "is-danger" : "is-success"}`
+                className: `button ${
+                  this.state.liked ? "is-danger" : "is-success"
+                }`
               },
               this.state.liked ? "Dislike" : "Like"
             );
