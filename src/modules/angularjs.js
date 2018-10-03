@@ -14,7 +14,7 @@ customElements.define(
         }
       ]).then(_ => {
         this.innerHTML = `
-        <div ng-app="app">
+        <div ng-app="app" ng-cloak>
           <div ng-controller="HelloWorldController as vm">
             <label>Name:</label>
             <input type="text" ng-model="vm.name" placeholder="Enter a name here">
