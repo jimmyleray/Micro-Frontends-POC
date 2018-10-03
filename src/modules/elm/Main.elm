@@ -18,7 +18,7 @@ update msg model =
 
 view model =
   div []
-    [ button [ onClick Decrement, class "button is-pulled-left is-danger is-large" ] [ text "-" ]
+    [ button [ onClick Decrement, class "button is-pulled-left is-danger" ] [ text "-" ]
     , div [ class "is-pulled-left box" ] [ text (String.fromInt model) ]
-    , button [ onClick Increment, class "button is-pulled-left is-success is-large" ] [ text "+" ]
+    , button [ onClick Increment, class "button is-pulled-left is-success" ] [ text "+" ]
     ]

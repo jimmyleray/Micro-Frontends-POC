@@ -4833,7 +4833,7 @@ var author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						elm$html$Html$Events$onClick(author$project$Main$Decrement),
-						elm$html$Html$Attributes$class('button is-pulled-left is-danger is-large')
+						elm$html$Html$Attributes$class('button is-pulled-left is-danger')
 					]),
 				_List_fromArray(
 					[
@@ -4855,7 +4855,7 @@ var author$project$Main$view = function (model) {
 				_List_fromArray(
 					[
 						elm$html$Html$Events$onClick(author$project$Main$Increment),
-						elm$html$Html$Attributes$class('button is-pulled-left is-success is-large')
+						elm$html$Html$Attributes$class('button is-pulled-left is-success')
 					]),
 				_List_fromArray(
 					[
