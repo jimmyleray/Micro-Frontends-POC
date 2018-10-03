@@ -14,6 +14,7 @@ loadScripts([
     { path: "/angularjs", component: "angularjs-wrap" },
     { path: "/react", component: "react-wrap" },
     { path: "/vue", component: "vue-wrap" },
+    { path: "/cyclejs", component: "cycle-wrap" },
     { path: "/elm", component: "elm-wrap" }
   ]);
 });
