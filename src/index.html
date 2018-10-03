@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Micro-Frontends POC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="navbar-start">
+      <a href="/" class="navbar-item">Accueil</a>
+      <a href="/angularjs" class="navbar-item">Module AngularJS</a>
+      <a href="/react" class="navbar-item">Module React</a>
+      <a href="/vue" class="navbar-item">Module VueJS</a>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container is-fluid">
+      <div id="router-view"></div>
+    </div>
+  </section>
+
+  <script src="./utils/polyfills.js"></script>
+  <script src="./utils/loadScripts.js"></script>
+  <script src="./modules/native.js"></script>
+  <script src="./modules/angularjs.js"></script>
+  <script src="./modules/react.js"></script>
+  <script src="./modules/vue.js"></script>
+  <script src="./core/router.js"></script>
+
+</body>
+
+</html>

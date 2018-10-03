@@ -1,0 +1,23 @@
+{
+  "name": "micro-frontends-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "serve": "serve -s -l 8080 src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimmyleray/Micro-Frontends-POC.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimmyleray/Micro-Frontends-POC/issues"
+  },
+  "homepage": "https://github.com/jimmyleray/Micro-Frontends-POC#readme",
+  "devDependencies": {
+    "serve": "^10.0.2"
+  }
+}
