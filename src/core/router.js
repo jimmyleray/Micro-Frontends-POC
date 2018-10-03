@@ -10,6 +10,7 @@ loadScripts([
 
   router.setRoutes([
     { path: "/", component: "native-wrap" },
+    { path: "/angular", component: "angular-wrap" },
     { path: "/angularjs", component: "angularjs-wrap" },
     { path: "/react", component: "react-wrap" },
     { path: "/vue", component: "vue-wrap" },
