@@ -14,20 +14,23 @@ customElements.define(
         }
       ]).then(_ => {
         this.innerHTML = `
-        <div ng-app="app" ng-cloak>
-          <div ng-controller="HelloWorldController as vm">
-            <label>Name:</label>
-            <input type="text" ng-model="vm.name" placeholder="Enter a name here">
-            <h1>Hello {{vm.name}} !</h1>
-          </div>
+        <div id="angularjs-root" ng-cloak>
+          <hello-world></hello-world>
         </div>
         `;
 
-        angular
-          .module("app", [])
-          .controller("HelloWorldController", function() {
-            this.name = "Jimmy";
-          });
+        angular.module("app", []).component("helloWorld", {
+          template: `
+            <label>Name:</label>
+            <input type="text" ng-model="name" placeholder="Enter a name here">
+            <h1>Hello {{name}} !</h1>
+            `,
+          controller: function($scope) {
+            $scope.name = "Jimmy";
+          }
+        });
+
+        angular.bootstrap(document.getElementById("angularjs-root"), ["app"]);
       });
 
       this.innerHTML = "Loading ...";

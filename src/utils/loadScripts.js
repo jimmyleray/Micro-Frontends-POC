@@ -1,23 +1,31 @@
-function loadScript(url, name) {
+function loadScript({ url, name, reload = false }) {
   return new Promise(resolve => {
     if (!!document.querySelector("#" + name)) {
-      resolve();
+      if (reload) {
+        document.querySelector("#" + name).remove();
+        addScript(url, name).addEventListener("load", _ => {
+          resolve();
+        });
+      } else {
+        resolve();
+      }
     } else {
-      const script = document.createElement("script");
-      script.src = url;
-      script.id = name;
-      script.type = "text/javascript";
-      document.body.appendChild(script);
-
-      script.addEventListener("load", _ => {
+      addScript(url, name).addEventListener("load", _ => {
         resolve();
       });
     }
   });
 }
 
+function addScript(url, name) {
+  const script = document.createElement("script");
+  script.src = url;
+  script.id = name;
+  script.type = "text/javascript";
+  document.body.appendChild(script);
+  return script;
+}
+
 function loadScripts(scripts) {
-  return Promise.all(
-    scripts.map(script => loadScript(script.url, script.name))
-  );
+  return Promise.all(scripts.map(loadScript));
 }

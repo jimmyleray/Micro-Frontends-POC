@@ -9,7 +9,8 @@ customElements.define(
       loadScripts([
         {
           url: "./modules/cyclejs/build/bundle.js",
-          name: "cyclejs"
+          name: "cyclejs",
+          reload: true
         }
       ]).then(_ => {});
 

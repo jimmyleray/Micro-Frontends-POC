@@ -9,7 +9,8 @@ customElements.define(
       loadScripts([
         {
           url: "./modules/angular/dist/angular/runtime.js",
-          name: "angular-runtime"
+          name: "angular-runtime",
+          reload: true
         },
         {
           url: "./modules/angular/dist/angular/polyfills.js",
@@ -21,11 +22,13 @@ customElements.define(
         },
         {
           url: "./modules/angular/dist/angular/vendor.js",
-          name: "angular-vendor"
+          name: "angular-vendor",
+          reload: true
         },
         {
           url: "./modules/angular/dist/angular/main.js",
-          name: "angular-main"
+          name: "angular-main",
+          reload: true
         }
       ]).then(_ => {});
 
