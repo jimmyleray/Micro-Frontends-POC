@@ -7,9 +7,10 @@ customElements.define(
 
     connectedCallback() {
       this.chrono = 0;
+      this.render(this.chrono);
       setInterval(() => {
-        this.render(this.chrono);
         this.chrono++;
+        this.render(this.chrono);
       }, 1000);
     }
 
