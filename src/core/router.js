@@ -12,6 +12,7 @@ loadScripts([
     { path: "/", component: "native-wrap" },
     { path: "/angularjs", component: "angularjs-wrap" },
     { path: "/react", component: "react-wrap" },
-    { path: "/vue", component: "vue-wrap" }
+    { path: "/vue", component: "vue-wrap" },
+    { path: "/elm", component: "elm-wrap" }
   ]);
 });
